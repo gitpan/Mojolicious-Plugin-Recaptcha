@@ -4,7 +4,7 @@ use strict;
 use Mojo::ByteStream;
 
 use base 'Mojolicious::Plugin';
-our $VERSION = '0.11';
+our $VERSION = '0.2';
 
 sub register {
 	my ($self,$app,$conf) = @_;
@@ -46,14 +46,14 @@ HTML
 					response   => $self->req->param('recaptcha_response_field')
 				},
 				sub {
-					my $content; $content = "$_" for $_[1]->res;
+					my $content = $_[1]->res->to_string;
 					$result = $content =~ /true/;
 					
 					$self->stash(recaptcha_error => $content =~ m{false\s*(.*)$}si)
 						unless $result
 					;
 				}
-			)->process;
+			)->start;
 			
 			$result;
 		}
@@ -68,7 +68,7 @@ Mojolicious::Plugin::Recaptcha - ReCaptcha plugin for Mojolicious framework
 
 =head1 VERSION
 
-0.11
+0.2
 
 =head1 SYNOPSIS
 
@@ -91,7 +91,7 @@ Mojolicious::Plugin::Recaptcha - ReCaptcha plugin for Mojolicious framework
    </form>
    
    # checking
-   if ($self->helper('recaptcha')) {
+   if ($self->recaptcha) {
       # all ok
    }
    
