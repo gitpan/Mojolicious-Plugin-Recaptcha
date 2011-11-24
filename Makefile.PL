@@ -9,7 +9,7 @@ WriteMakefile
           'VERSION_FROM' => 'lib/Mojolicious/Plugin/Recaptcha.pm',
           'PREREQ_PM' => {
                            'Test::More' => 0,
-                           'Mojolicious' => '1.13'
+                           'Mojolicious' => '2.31'
                          }
         )
 ;

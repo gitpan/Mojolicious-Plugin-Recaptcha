@@ -12,7 +12,7 @@ my $builder = Module::Build->new(
 		'Test::More' => 0,
 	},
 	requires          => {
-		'Mojolicious' => 1.13,
+		'Mojolicious' => 2.31,
 	},
 	meta_merge => {
 		resources => {

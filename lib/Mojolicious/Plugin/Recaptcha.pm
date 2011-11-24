@@ -4,7 +4,7 @@ use strict;
 use Mojo::ByteStream;
 
 use base 'Mojolicious::Plugin';
-our $VERSION = '0.3';
+our $VERSION = '0.31';
 
 sub register {
 	my ($self,$app,$conf) = @_;
@@ -41,7 +41,7 @@ HTML
 			my ($self,$cb) = @_;
 			
 			my @post_data = (
-				'http://www.google.com/recaptcha/api/verify', 
+				'http://www.google.com/recaptcha/api/verify',
 				{ 
 					privatekey => $conf->{'private_key'},
 					remoteip   => 
@@ -85,7 +85,7 @@ Mojolicious::Plugin::Recaptcha - ReCaptcha plugin for Mojolicious framework
 
 =head1 VERSION
 
-0.3
+0.31
 
 =head1 SYNOPSIS
 
@@ -111,7 +111,7 @@ Mojolicious::Plugin::Recaptcha - ReCaptcha plugin for Mojolicious framework
    
    # checking blocking way
    $self->recaptcha;
-   if ($self->stash('recaptcha_error')) {
+   unless ($self->stash('recaptcha_error')) {
       # all ok
    }
    
