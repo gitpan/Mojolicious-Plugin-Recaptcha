@@ -18,10 +18,10 @@ name: Mojolicious-Plugin-Recaptcha
 provides:
   Mojolicious::Plugin::Recaptcha:
     file: lib/Mojolicious/Plugin/Recaptcha.pm
-    version: 0.31
+    version: 0.4
 requires:
   Mojolicious: 2.31
 resources:
   license: http://dev.perl.org/licenses/
   repository: git://github.com/konstantinov/Mojolicious-Plugin-Recaptcha.git
-version: 0.31
+version: 0.4
