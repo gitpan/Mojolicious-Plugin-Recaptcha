@@ -1,0 +1,53 @@
+{
+   "abstract" : "ReCaptcha plugin for Mojolicious framework",
+   "author" : [
+      "Dmitry Konstantinov <konstantinov.dmitry@gmail.com>"
+   ],
+   "dynamic_config" : 1,
+   "generated_by" : "Module::Build version 0.4, CPAN::Meta::Converter version 2.120921",
+   "keywords" : [
+      "mojolicious",
+      "recaptcha"
+   ],
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Mojolicious-Plugin-Recaptcha",
+   "prereqs" : {
+      "build" : {
+         "requires" : {
+            "Test::More" : "0"
+         }
+      },
+      "configure" : {
+         "requires" : {
+            "Module::Build" : "0.4"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Mojolicious" : "2.31"
+         }
+      }
+   },
+   "provides" : {
+      "Mojolicious::Plugin::Recaptcha" : {
+         "file" : "lib/Mojolicious/Plugin/Recaptcha.pm",
+         "version" : "0.5"
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "license" : [
+         "http://dev.perl.org/licenses/"
+      ],
+      "repository" : {
+         "url" : "git://github.com/konstantinov/Mojolicious-Plugin-Recaptcha.git"
+      }
+   },
+   "version" : "0.5"
+}
