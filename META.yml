@@ -5,9 +5,9 @@ author:
 build_requires:
   Test::More: 0
 configure_requires:
-  Module::Build: 0.4
+  Module::Build: 0.38
 dynamic_config: 1
-generated_by: 'Module::Build version 0.4, CPAN::Meta::Converter version 2.120921'
+generated_by: 'Module::Build version 0.38, CPAN::Meta::Converter version 2.110440'
 keywords:
   - mojolicious
   - recaptcha
@@ -19,10 +19,10 @@ name: Mojolicious-Plugin-Recaptcha
 provides:
   Mojolicious::Plugin::Recaptcha:
     file: lib/Mojolicious/Plugin/Recaptcha.pm
-    version: 0.5
+    version: 0.6
 requires:
   Mojolicious: 2.31
 resources:
   license: http://dev.perl.org/licenses/
   repository: git://github.com/konstantinov/Mojolicious-Plugin-Recaptcha.git
-version: 0.5
+version: 0.6
