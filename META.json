@@ -37,7 +37,7 @@
    "provides" : {
       "Mojolicious::Plugin::Recaptcha" : {
          "file" : "lib/Mojolicious/Plugin/Recaptcha.pm",
-         "version" : "0.6"
+         "version" : "0.61"
       }
    },
    "release_status" : "stable",
@@ -50,5 +50,5 @@
          "url" : "git://github.com/konstantinov/Mojolicious-Plugin-Recaptcha.git"
       }
    },
-   "version" : "0.6"
+   "version" : "0.61"
 }
