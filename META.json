@@ -4,7 +4,7 @@
       "Dmitry Konstantinov <konstantinov.dmitry@gmail.com>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "Module::Build version 0.38, CPAN::Meta::Converter version 2.110440",
+   "generated_by" : "Module::Build version 0.4007, CPAN::Meta::Converter version 2.132140",
    "keywords" : [
       "mojolicious",
       "recaptcha"
@@ -20,12 +20,12 @@
    "prereqs" : {
       "build" : {
          "requires" : {
-            "Test::More" : 0
+            "Test::More" : "0"
          }
       },
       "configure" : {
          "requires" : {
-            "Module::Build" : "0.38"
+            "Module::Build" : "0.40"
          }
       },
       "runtime" : {
@@ -37,7 +37,7 @@
    "provides" : {
       "Mojolicious::Plugin::Recaptcha" : {
          "file" : "lib/Mojolicious/Plugin/Recaptcha.pm",
-         "version" : "0.61"
+         "version" : "0.62"
       }
    },
    "release_status" : "stable",
@@ -46,9 +46,8 @@
          "http://dev.perl.org/licenses/"
       ],
       "repository" : {
-         "type" : "git",
          "url" : "git://github.com/konstantinov/Mojolicious-Plugin-Recaptcha.git"
       }
    },
-   "version" : "0.61"
+   "version" : "0.62"
 }

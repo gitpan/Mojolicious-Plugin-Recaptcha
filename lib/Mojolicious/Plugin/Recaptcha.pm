@@ -5,7 +5,7 @@ use Mojo::ByteStream;
 use Mojo::JSON;
 
 use base 'Mojolicious::Plugin';
-our $VERSION = '0.61';
+our $VERSION = '0.62';
 
 sub register {
 	my ($self,$app,$conf) = @_;
@@ -54,7 +54,7 @@ HTML
 			
 			my @post_data = (
 				'http://www.google.com/recaptcha/api/verify',
-				{ 
+				form => { 
 					privatekey => $conf->{'private_key'},
 					remoteip   => 
 						$self->req->headers->header('X-Real-IP')
@@ -76,12 +76,12 @@ HTML
 			};
 			
 			if ($cb) {
-				$self->ua->post_form(
+				$self->ua->post(
 					@post_data,
 					$callback,
 				);
 			} else {
-				my $tx = $self->ua->post_form(@post_data);
+				my $tx = $self->ua->post(@post_data);
 				
 				return $callback->('',$tx);
 			}
@@ -97,7 +97,7 @@ Mojolicious::Plugin::Recaptcha - ReCaptcha plugin for Mojolicious framework
 
 =head1 VERSION
 
-0.61
+0.62
 
 =head1 SYNOPSIS
 
